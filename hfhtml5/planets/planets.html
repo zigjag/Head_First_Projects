@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Planets</title>
+    <script type="text/javascript">
+      function init() {
+      var planet = document.getElementById("greenplanet");
+      planet.innerHTML = "Red Alert: hit by phaser fire!"
+      }
+      window.onload = init;
+    </script>
+    <style media="screen">
+      body {
+        background: #3d3d3d;
+        color: white;
+        font-family: "Comic Sans ms";
+      }
+      .green {
+        color: green;
+        animation: greenanime 10s infinite alternate;
+        /* transform: translate(33%); */
+      }
+      @keyframes greenanime {
+        from {transform: translate(0);}
+        to {transform: translate(66%);}
+      }
+      .red {
+        color: red;
+        margin-left: 33%;
+        animation: redanime 10s infinite alternate;
+      }
+      @keyframes redanime {
+        from {transform: scaleX(0);}
+        to {transform: scaleX(100%);}
+      }
+      .blue {
+        color: blue;
+        margin-left: 66%;
+        animation: blueanime 10s infinite alternate;
+      }
+      @keyframes blueanime {
+        from {transform: translate(0);}
+        to {transform: translate(-190%);}
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class=green>Green Planet</h1>
+    <p class=green id="greenplanet">All is well</p>
+    <h1 class=red>Red Planet</h1>
+    <p class=red id="redplanet">Nothing to report</p>
+    <h1 class=blue>Blue Planet</h1>
+    <p class=blue id="blueplanet">All systems A-OK</p>
+  </body>
+</html>
